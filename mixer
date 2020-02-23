@@ -1,0 +1,22 @@
+from electrocasnice_mici import Electrocasnice_mici
+
+class Mixer(Electrocasnice_mici):
+    def __init__(self, rotatii_min,lungime_cablu,baterie,pret,consum,producator,cod_produs):
+        self.rotatii_min=rotatii_min
+        Electrocasnice_mici.__init__(self,lungime_cablu,baterie,pret,consum,producator,cod_produs)
+
+    def __str__(self):
+        return str(self.lungime_cablu) + " " + str(self.baterie) + " " + str(self.pret) + " " + str(self.consum) + " " + \
+               str(self.producator) + " " + str(self.cod_produs)+" "+str(self.rotatii_min)
+
+
+print("OBIECT CLASA MIXER ############################")
+m=Mixer(500,4,'baterie_10',50,400,'Varta',50)
+m2=Mixer(600,3,'baterie_20',20,200,'Duracell',35)
+print(m)
+print(m2)
+Mixer.clasa=' <<Electrocasnice mici>>'
+Mixer.subclasa='<<Mixer>>'
+print('Variabila clasei si subclasei Mixer')
+print(Mixer.clasa)
+print(Mixer.subclasa)
